@@ -6,7 +6,7 @@ html, body {
     font-family: Century Gothic;
     font-weight:bold;
     
-    font-size: 5vw;
+    font-size: 12vw;
     font-weight:bold;
     overflow: hidden;
     white-space:nowrap;
@@ -46,6 +46,7 @@ table, th, tr
 .invis
 {
     visibility: visible;
+    background-color: aquamarine;
 }
 
 .header-text {  
@@ -57,6 +58,7 @@ table, th, tr
 .header-text-rel {  
     position: absolute;
     display: flex;
+    align-self: right;
     bottom: 2ex;
     right: 0;
     left: 0;
@@ -80,6 +82,7 @@ table, th, tr
 .button-text {
     display: block;
     background-color: #cc1ab4;  
+    transform: translateY(-.28em); /*Alignment*/
 }
 
 .button-text:hover {
