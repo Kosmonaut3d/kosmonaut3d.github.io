@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Century Gothic;
-    font-size: 18vw;
+    font-size: 10vmin;
     white-space:nowrap;
 }
 
@@ -12,7 +12,7 @@ html, body {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: rgb(43, 43, 43);
+    background-color: rgb(17, 17, 17);
 }
 
 .menu {
@@ -38,12 +38,13 @@ html, body {
 .invis
 {
     visibility: hidden;
-    background-color: aquamarine;
+    font-size: 10vmin;
 }
 
 .header-text {  
     display: flex;
-    color:rgb(179, 179, 179);
+    color:rgb(87, 87, 87);
+    text-shadow: -2vmin 3vmin .5vmin #000;
     /*background-color: rgb(158, 30, 30); */
     /*text-shadow: 0 10px 20px rgba(0,0,0,0.6); */
 }
@@ -55,6 +56,7 @@ html, body {
     /*background-color: rgb(85, 192, 108); */
     transform: translateZ(0);
     color:rgb(85, 192, 108);
+    font-size: 5vmin;
     /*text-shadow: 0 10px 20px rgba(0,0,0,0.6); */
 }
 
@@ -73,7 +75,7 @@ html, body {
 .button-text {
     display: block;
     transform: translateZ(0);
-    color: rgb(0,0,0);
+    color: rgb(163, 173, 185);
 }
 
 .button-text:hover{
