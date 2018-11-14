@@ -3,7 +3,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:300;
     font-size: 10vmin;
     white-space:nowrap;
 }
@@ -12,7 +13,7 @@ html, body {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(236, 236, 236);
 }
 
 .menu {
@@ -44,8 +45,8 @@ html, body {
 .header-text {  
     display: flex;
     color:rgb(87, 87, 87);
-    text-shadow: -2vmin 3vmin .5vmin #000;
-    /*background-color: rgb(158, 30, 30); */
+    text-shadow: -2vmin 3vmin 2.5vmin rgb(138, 138, 138);
+    font-weight:300;
     /*text-shadow: 0 10px 20px rgba(0,0,0,0.6); */
 }
 
@@ -55,9 +56,11 @@ html, body {
     bottom: 2ex;
     /*background-color: rgb(85, 192, 108); */
     transform: translateZ(0);
-    color:rgb(85, 192, 108);
+    color:tomato;
+    text-shadow: -1vmin 1.5vmin 1.5vmin rgb(138, 138, 138);
     font-size: 5vmin;
-    /*text-shadow: 0 10px 20px rgba(0,0,0,0.6); */
+    font-weight:600;
+    /* background-color: rgb(158, 30, 30); */
 }
 
 .button {
@@ -68,7 +71,7 @@ html, body {
     margin-top: auto;
     width: auto;
     height: 1em;
-    transform: rotate(45deg) translateY(-.28em);
+    transform: rotate(45deg) translateY(-.13em);
     transform-origin: bottom left;
 }
 
@@ -76,10 +79,12 @@ html, body {
     display: block;
     transform: translateZ(0);
     color: rgb(163, 173, 185);
+    font-weight:300;
 }
 
 .button-text:hover{
     color: #fd0;
+    cursor: pointer;
 }
 
 /* BUTTON STRIPES */
@@ -89,8 +94,8 @@ html, body {
     background-color: #fd0;
     margin-left: 100vw; /* 100vw*/
     width: 100vw;
-    height: 1.4ex;
-    transform: translateY(.5ex);
+    height: 1.7ex;
+    transform: translateY(.3ex);
     transition: all .2s ease-out;
 }
 
@@ -104,12 +109,12 @@ html, body {
     position: absolute;
     background-color: #fd0;
     width: 100vw;
-    height: 1.355ex;
-    transform: translate(-200vw, -1.785ex); /*-200vw*/
+    height: 1.755ex;
+    transform: translate(-200vw, -2.385ex); /*-200vw*/
     transition: all .2s ease-out;
 }
 
 .button-text:hover .buttonband_left{
     transition: transform 200ms ease-in;
-    transform : translate(-100vw, -1.785ex);
+    transform : translate(-100vw, -2.385ex);
 }
