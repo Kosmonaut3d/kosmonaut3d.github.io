@@ -9,7 +9,12 @@
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 600" rel="stylesheet">
 </head>
-
+<style>
+    @keyframes VIEWTRANSITION {
+        0%   { }
+        100% { transform: scale(3) translateX(-50vw) rotate(-45deg) translateY(-8vh)  }
+}
+</style>
 <body oncontextmenu="return false;">
 
     <div class="container">
@@ -31,8 +36,8 @@
                         <th>
                             <div class="button">
                             <!--Could have description-->
-                            <div class="invis">none</div>
-                                <div class="button-text">
+                            <div class="invis">nonee</div>
+                                <div id="button1" class="button-text">
                                     <div>
                                         BUTTON1
                                         <span class="buttonband_right"></span>
@@ -52,6 +57,19 @@
             </div>
         </div>
     </div>
+    <script>
+        var container = document.querySelector('.container');
+        var button1 = document.querySelector('#button1');
+
+        function onViewChange(evt) {
+            container.classList.toggle('view-change');
+            container.classList.toggle('.button-text:hover .buttonband_right');
+        }
+
+        button1.addEventListener('click', onViewChange);
+
+
+    </script>
 </body>
 
 </html>
