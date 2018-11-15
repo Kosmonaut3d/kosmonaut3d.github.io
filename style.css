@@ -9,14 +9,6 @@ html, body {
     white-space:nowrap;
 }
 
-.menu {
-    text-align: center;
-    margin-top: 30vh;
-    margin-left:auto;
-    margin-right:auto;
-    transition: all .2s ease-out;
-}
-
 .view-change #button1 {
     transition: margin-left 200ms ease-in;
     margin-left: 0vw; 
