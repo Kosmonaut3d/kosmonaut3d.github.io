@@ -13,8 +13,8 @@
 
 @keyframes VIEWTRANSITION {
     0%   { }
-    70% { transform: scale(4) translateX(-50vw) rotate(-45deg) translateY(-10vh)}
-    100% { transform: scale(10) translateX(-50vw) rotate(-45deg) translateY(-15vh)  }
+    70% { transform: scale(4) translateX(-50vw) translateY(-10vh) rotate(-45deg) }
+    100% { transform: scale(10) translateX(-70vw) translateY(-10vh) rotate(-45deg)   }
 }
 
 @keyframes VIEWTRANSITION_BG {
@@ -30,12 +30,20 @@
     background-color: rgb(236, 236, 236);
 }
 
+.menu {
+    text-align: center;
+    margin-top: 40vh;
+    margin-left:auto;
+    margin-right:auto;
+    transition: all .2s ease-out;
+}
+
 .view-change {
     animation : VIEWTRANSITION_BG 2s ease-in forwards;
 }
 
 .view-change .menu {
-    animation : VIEWTRANSITION 2s ease-in forwards;
+    animation : VIEWTRANSITION 1.5s ease-in forwards;
 }
 
 .view-change #buttonBand1 {
