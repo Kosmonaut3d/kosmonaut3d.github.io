@@ -1,0 +1,59 @@
+html, body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:300;
+    font-size: 3vmin;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 236, 236);
+}
+
+.top-bar{
+    z-index: 1;
+    top: 0%;
+    overflow: hidden;
+    height: .8em;
+    font-size: 2em;
+    position: fixed;
+    color: #fd0;
+    background-color: rgb(236, 236, 236);
+    border-style: solid;
+    border-width: .5vmin;
+    border-color: rgb(236, 236, 236);
+}
+
+.top-title
+{
+    height: 1.8em;
+}
+
+.top-band
+{
+    height: .8em;
+    background-color: #fd0;
+    transition: width 1s ease-in-out;
+}
+
+.top-band.left
+{
+    width: 10%;
+}
+
+.top-band.right
+{
+    width: 100%;
+}
+
+#page-wrap {
+    top: 2em;
+    width: 50%; 
+    margin: 15px auto; 
+    position: relative; 
+  }
+  
+#sidebar { 
+    top: 20%;
+    overflow: auto;
+    width: auto; 
+    position: fixed; 
+    margin-left: auto; 
+}

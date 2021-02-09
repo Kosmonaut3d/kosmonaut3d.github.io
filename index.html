@@ -9,103 +9,80 @@
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 600" rel="stylesheet">
 </head>
-<style>
 
-@keyframes VIEWTRANSITION {
-    0%   { }
-    70% { transform: scale(4) translateX(-50vw) translateY(-10vh) rotate(-45deg) }
-    100% { transform: scale(10) translateX(-70vw) translateY(-10vh) rotate(-45deg)   }
-}
-
-@keyframes VIEWTRANSITION_BG {
-        0%   { background-color: rgb(236, 236, 236); }
-        80% { background-color: rgb(236, 236, 236); } 
-        100% { background-color: #fd0 } 
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: rgb(236, 236, 236);
-}
-
-.menu {
-    text-align: center;
-    margin-top: 40vh;
-    margin-left:auto;
-    margin-right:auto;
-    transition: all .2s ease-out;
-}
-
-.view-change {
-    animation : VIEWTRANSITION_BG 2s ease-in forwards;
-}
-
-.view-change .menu {
-    animation : VIEWTRANSITION 1.5s ease-in forwards;
-}
-
-.view-change #buttonBand1 {
-    transition: margin-left 200ms ease-in;
-    margin-left: 0vw; 
-}
-
-
-</style>
 <body oncontextmenu="return false;">
-
     <div class="container">
-
-        <div class="view menu-view">
-            <div class="menu">
-                <table style="width:10%" align="center">
+            <div class="menu" >
+                <table>
                     <tr>
                         <th>
-                        <div class ="header">
-                            <div class="header-text">
-                                MENU
+                            <div class="header">
+                                <span class="header-text">
+                                    E93
+                                </span>
+                                <span class="header-text-rel">
+                                   3 SERIES<br>CONVERTIBLE</br>
+                                </span>
                             </div>
-                            <div class="header-text-rel">
-                                <span class="invis">MENU</span><span>Kosmonaut</span>
-                            </div>
-                        </div>
                         </th>
                         <th>
                             <div class="button">
-                            <!--Could have description-->
-                            <div class="invis">nonee</div>
-                                <div id="button1" class="button-text">
-                                    <div>
-                                        BUTTON1
-                                        <span id="buttonBand1" class="buttonband_right"></span>
-                                    </div>
-                                    <span class="buttonband_left"></span>
+                                <div id="button-design" class="button-text">
+                                    <span class="buttonband left"></span><a href="pages/design.html">DESIGN</a><span class="buttonband right" id="buttonband1"></span>
                                 </div>
-                                <div class="button-text">
-                                    <div>
-                                    BUTTON2<span class="buttonband_right"></span>
-                                    </div>
-                                    <span class="buttonband_left"></span>
+                                
+                                <div id="button-engine" class="button-text">
+                                    <span class="buttonband left"></span><span>ENGINE</span><span class="buttonband right" id="buttonband1"></span>
+                                </div>
+                                
+                                <div id="button2" class="button-text">
+                                    <span class="buttonband left"></span><span>FACELIFT</span><span class="buttonband right" id="buttonband1"></span>
+                                </div>
+
+                                <div id="button2" class="button-text">
+                                    <span class="buttonband left"></span><span>TEST</span><span class="buttonband right" id="buttonband1"></span>
+                                </div>
+                                
+                                <div id="button2" class="button-text">
+                                    <span class="buttonband left"></span><span>TEST</span><span class="buttonband right" id="buttonband1"></span>
                                 </div>
                             </div>
                         </th>
                     </tr>
                 </table>
-            </div>
         </div>
     </div>
     <script>
         var container = document.querySelector('.container');
-        var button1 = document.querySelector('#button1');
+        var buttonDesign = document.querySelector('#button-design');
+        var buttonEngine = document.querySelector('#button-engine');
+
+        buttonDesign.onmouseover = function()
+        {
+            container.classList.add('hovered-design');
+        }
+
+        buttonDesign.onmouseout = function()
+        {
+            container.classList.remove('hovered-design');
+        }
+
+        buttonEngine.onmouseover = function()
+        {
+            container.classList.add('hovered-engine');
+        }
+
+        buttonEngine.onmouseout = function()
+        {
+            container.classList.remove('hovered-engine');
+        }
 
         function onViewChange(evt) {
             container.classList.toggle('view-change');
         }
 
-        button1.addEventListener('click', onViewChange);
+        buttonDesign.addEventListener('click', onViewChange);
     </script>
 </body>
 
 </html>
-

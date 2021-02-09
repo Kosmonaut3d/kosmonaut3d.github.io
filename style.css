@@ -1,12 +1,52 @@
 html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    margin: auto;
     font-family: 'Josefin Sans', sans-serif;
     font-weight:300;
     font-size: 10vmin;
     white-space:nowrap;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    opacity: 1.0;
+    position: fixed;
+    background-color: rgb(236, 236, 236);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(resources/main_square_blurred.jpg);
+    transition: all .2s ease-out;
+}
+
+.hovered-design {
+    background-image: url(resources/concept_square_blurred.jpg);
+}
+
+.hovered-engine {
+    background-image: url(resources/engine_square.jpg);
+}
+
+.menu {
+    text-align: center;
+    margin-top: 25vh;
+    margin-left:20vw;
+    margin-right:auto;
+}
+
+table {
+    width:10%; 
+    margin:auto;
 }
 
 .view-change #button1 {
@@ -17,59 +57,43 @@ html, body {
 .header {  
     z-index: 10;
     position: relative;
-    display: block;
-    text-align: right;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: auto;
-    margin-bottom: 1px;
     transform: rotate(-45deg);
     transform-origin: bottom right;
 }
 
-.invis
-{
-    visibility: hidden;
-    font-size: 10vmin;
-}
-
 .header-text {  
-    display: flex;
     color:rgb(87, 87, 87);
     text-shadow: -2vmin 3vmin 2.5vmin rgb(138, 138, 138);
-    font-weight:300;
-    /*text-shadow: 0 10px 20px rgba(0,0,0,0.6); */
+    font-weight:400;
 }
 
-.header-text-rel {  
-    display: block;
+.header-text-rel {
     position: absolute;
-    bottom: 2ex;
-    /*background-color: rgb(85, 192, 108); */
-    transform: translateZ(0);
-    color:tomato;
+    bottom: 0.5ex;
+    margin-left: 1ex;
+    text-align: left;
+    color:#002f5f;
     text-shadow: -1vmin 1.5vmin 1.5vmin rgb(138, 138, 138);
     font-size: 5vmin;
-    font-weight:600;
-    /* background-color: rgb(158, 30, 30); */
+    font-weight:400;
+}
+
+.invis
+{
+    visibility: visible;
+    font-size: 10vmin;
 }
 
 .button {
     display: block;
     text-align: left;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: auto;
-    width: auto;
     height: 1em;
-    transform: rotate(45deg) translateY(-.13em);
+    transform: rotate(45deg) translateY(1em);
     transform-origin: bottom left;
 }
 
 .button-text {
-    display: block;
-    transform: translateZ(0);
-    color: rgb(163, 173, 185);
+    color: rgb(14 14 14);
     font-weight:300;
 }
 
@@ -79,33 +103,61 @@ html, body {
 }
 
 /* BUTTON STRIPES */
-.buttonband_right {
+.buttonband
+{
     z-index: -1;
     position: absolute;
     background-color: #fd0;
-    margin-left: 100vw; /* 100vw*/
     width: 100vw;
-    height: 1.7ex;
-    transform: translateY(.3ex);
-    transition: all .2s ease-out;
+    height: .8em;
 }
 
-.button-text:hover .buttonband_right{
+.buttonband.right 
+{
+    margin-left: 100vw; /* 100vw*/
+}
+
+.buttonband.left {
+    background-color: #fd0;
+    margin-left: -200vw;
+}
+
+.button-text:hover .buttonband
+{
+    visibility: visible;
     transition: margin-left 200ms ease-in;
+}
+
+.button-text:hover .buttonband.right{
     margin-left: 0vw; 
 }
 
-.buttonband_left {
-    z-index: -1;
-    position: absolute;
-    background-color: #fd0;
-    width: 100vw;
-    height: 1.755ex;
-    transform: translate(-200vw, -2.385ex); /*-200vw*/
-    transition: all .2s ease-out;
+.button-text:hover .buttonband.left{
+    margin-left: -100vw; 
 }
 
-.button-text:hover .buttonband_left{
-    transition: transform 200ms ease-in;
-    transform : translate(-100vw, -2.385ex);
+@keyframes VIEWTRANSITION {
+    0%   { }
+    70% { transform: scale(4) translateX(-50vw) translateY(-10vh) rotate(-45deg) }
+    100% { transform: scale(10) translateX(-70vw) translateY(-10vh) rotate(-45deg)   }
+}
+
+@keyframes VIEWTRANSITION_BG {
+        0%   { background-color: rgb(236, 236, 236); }
+        80% { background-color: rgb(236, 236, 236); } 
+        100% { background-color: #fd0 } 
+}
+
+
+.view-change {
+    animation : VIEWTRANSITION_BG 2s ease-in forwards;
+}
+
+.view-change .menu {
+    animation : VIEWTRANSITION 1.5s ease-in forwards;
+}
+
+.view-change #buttonband1 {
+    transition: margin-left 200ms ease-in;
+    margin-left: 0vw; 
 }
