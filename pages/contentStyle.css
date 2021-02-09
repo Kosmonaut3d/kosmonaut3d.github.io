@@ -5,7 +5,29 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(236, 236, 236);
+    background-repeat: repeat;
+    background-size: 10vmin;
+    background-position: center;
+    background-image: url(../resources/background_pattern.jpg);
 }
+
+a
+{
+    color: rgb(30 0 103);
+}
+
+a:hover{
+    color: rgb(206 106 172);
+}
+
+img
+{
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #c7c7c7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 .top-bar{
     z-index: 1;
@@ -48,6 +70,7 @@ html, body {
     width: 50%; 
     margin: 15px auto; 
     position: relative; 
+    background-color:rgb(236, 236, 236);
   }
   
 #sidebar { 

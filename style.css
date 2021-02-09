@@ -133,29 +133,3 @@ table {
 .button-text:hover .buttonband.left{
     margin-left: -100vw; 
 }
-
-@keyframes VIEWTRANSITION {
-    0%   { }
-    70% { transform: scale(4) translateX(-50vw) translateY(-10vh) rotate(-45deg) }
-    100% { transform: scale(10) translateX(-70vw) translateY(-10vh) rotate(-45deg)   }
-}
-
-@keyframes VIEWTRANSITION_BG {
-        0%   { background-color: rgb(236, 236, 236); }
-        80% { background-color: rgb(236, 236, 236); } 
-        100% { background-color: #fd0 } 
-}
-
-
-.view-change {
-    animation : VIEWTRANSITION_BG 2s ease-in forwards;
-}
-
-.view-change .menu {
-    animation : VIEWTRANSITION 1.5s ease-in forwards;
-}
-
-.view-change #buttonband1 {
-    transition: margin-left 200ms ease-in;
-    margin-left: 0vw; 
-}
