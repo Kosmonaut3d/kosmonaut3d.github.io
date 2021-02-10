@@ -10,6 +10,7 @@ html, body {
     background-size: 10vmin;
     background-position: center;
     background-image: url(../resources/background_pattern.jpg);
+    scroll-behavior: smooth;
 }
 
 a
