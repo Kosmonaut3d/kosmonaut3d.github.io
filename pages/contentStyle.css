@@ -1,11 +1,12 @@
 html, body {
     font-family: 'Josefin Sans', sans-serif;
     font-weight:300;
-    font-size: 3vmin;
+    font-size: 2.5vmin;
     margin: 0;
     padding: 0;
     background-color: rgb(236, 236, 236);
     background-repeat: repeat;
+    background-attachment: fixed;
     background-size: 10vmin;
     background-position: center;
     background-image: url(../resources/background_pattern.jpg);
@@ -20,7 +21,7 @@ a:hover{
     color: rgb(206 106 172);
 }
 
-img
+.opaque_img
 {
     width: 100%;
     border-radius: 8px;
@@ -28,12 +29,37 @@ img
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.transparent_img
+{
+    width: 100%;
+}
 
+blockquote
+{
+    font-style: oblique;
+    font-weight: 400;
+    background-color: rgb(199 199 199);
+    padding: 1vmin;
+}
+
+figcaption
+{
+    font-size: .7em;
+}
+
+figure
+{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0em;
+    margin-inline-end: 0em;
+}
 .top-bar{
     z-index: 1;
     top: 0%;
     overflow: hidden;
     height: .8em;
+    width: 100%;
     font-size: 2em;
     position: fixed;
     color: #fd0;
@@ -41,11 +67,6 @@ img
     border-style: solid;
     border-width: .5vmin;
     border-color: rgb(236, 236, 236);
-}
-
-.top-title
-{
-    height: 1.8em;
 }
 
 .top-band
@@ -68,7 +89,8 @@ img
 #page-wrap {
     top: 2em;
     width: 50%; 
-    margin: 15px auto; 
+    margin: auto;
+    padding: .5vmin;
     position: relative; 
     background-color:rgb(236, 236, 236);
   }
@@ -78,5 +100,6 @@ img
     overflow: auto;
     width: auto; 
     position: fixed; 
-    margin-left: auto; 
+    margin-left: 2vmin;
+    background-color:rgb(236, 236, 236);
 }
